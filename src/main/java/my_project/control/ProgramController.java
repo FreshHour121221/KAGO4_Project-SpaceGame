@@ -51,6 +51,7 @@ public class ProgramController {
         // Ton
         viewController.getSoundController().loadSound("src/main/resources/sound/bgm_startScreen.mp3","startBGM", true);
         SoundController.playSound("startBGM");
+        viewController.getSoundController().loadSound("src/main/resources/sound/eliasmusi.mp3","scene1bg",true);
         // Bild
         StartBackground sback = new StartBackground();
         viewController.draw(sback,0);
@@ -80,6 +81,9 @@ public class ProgramController {
             currentScene = 1;
             viewController.showScene(currentScene);
             SoundController.stopSound("startBGM");
+            //musik scene 1
+
+            SoundController.playSound("eliasmusi");
         }
 
     }
